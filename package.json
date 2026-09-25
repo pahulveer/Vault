@@ -1,0 +1,24 @@
+{
+  "name": "vault",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vault - Distributed Fault-Tolerant Object Storage Engine",
+  "scripts": {
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start:server": "npm run start --prefix server",
+    "test:phase1": "node test.js",
+    "test:phase2": "node audit.js",
+    "test:phase3": "node server/run_phase3_tests.js",
+    "test:phase4": "node server/run_phase4_tests.js",
+    "test:persistence": "node test-persistence.js",
+    "test": "node test.js && node audit.js && node server/run_phase3_tests.js && node server/run_phase4_tests.js && node test-persistence.js",
+    "reset": "node scripts/reset.js"
+  },
+  "dependencies": {
+    "form-data": "^4.0.6"
+  }
+}

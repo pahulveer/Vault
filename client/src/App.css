@@ -1,0 +1,249 @@
+:root {
+  --bg-color: #f4f7f6;
+  --text-color: #333;
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --success-color: #2ecc71;
+  --warning-color: #f1c40f;
+  --danger-color: #e74c3c;
+  --card-bg: #fff;
+  --border-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.vault-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.status-healthy {
+  background-color: #e8f8f5;
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.status-offline, .status-checking... {
+  background-color: #fdedec;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 1.4em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.node-card {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+.node-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+.node-stats p {
+  margin: 8px 0;
+  font-size: 0.9em;
+}
+
+.status-text.online {
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.upload-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px dashed var(--border-color);
+}
+
+.btn-primary, .btn-secondary {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: opacity 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #ecf0f1;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+}
+
+.btn-primary:hover:not(:disabled), .btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.status-pill {
+  background-color: #e8f8f5;
+  color: var(--success-color);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.events-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.event-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.event-type {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 0.85em;
+}
+
+.event-time {
+  color: #7f8c8d;
+  font-size: 0.8em;
+}
+
+.event-msg {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.error-banner {
+  background-color: #fdedec;
+  color: var(--danger-color);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--danger-color);
+  font-weight: bold;
+}
