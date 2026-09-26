@@ -14,7 +14,7 @@ import type {
 } from '../types';
 import { mockApiService } from './mockApi';
 
-const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || '/api';
 
 let isMockMode = false;
 export const setMockMode = (enabled: boolean) => {

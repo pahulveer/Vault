@@ -1,1 +1,38 @@
-{}
+{
+  "obj_f09c8596befc4a9991e2c794cf69aad4": {
+    "objectId": "obj_f09c8596befc4a9991e2c794cf69aad4",
+    "filename": "img.png",
+    "size": 67378,
+    "checksum": "sha256:4a5ef787106d1423854e187af4506a854d776572cc057fae8d868a235af18eaf",
+    "version": 1,
+    "createdAt": "2026-09-25T23:44:05.647Z",
+    "status": "HEALTHY",
+    "replicationFactor": 3,
+    "replicas": [
+      {
+        "nodeId": "node-01",
+        "status": "HEALTHY",
+        "version": 1,
+        "checksum": "sha256:4a5ef787106d1423854e187af4506a854d776572cc057fae8d868a235af18eaf",
+        "size": 67378,
+        "lastVerified": "2026-09-25T23:46:58.619Z"
+      },
+      {
+        "nodeId": "node-02",
+        "status": "HEALTHY",
+        "version": 1,
+        "checksum": "sha256:4a5ef787106d1423854e187af4506a854d776572cc057fae8d868a235af18eaf",
+        "size": 67378,
+        "lastVerified": "2026-09-25T23:46:58.622Z"
+      },
+      {
+        "nodeId": "node-03",
+        "status": "HEALTHY",
+        "version": 1,
+        "checksum": "sha256:4a5ef787106d1423854e187af4506a854d776572cc057fae8d868a235af18eaf",
+        "size": 67378,
+        "lastVerified": "2026-09-25T23:46:58.633Z"
+      }
+    ]
+  }
+}
