@@ -170,3 +170,4 @@ Follow this sequence to present Vault to judges:
 
 *   **Storage Simulation**: For hackathon evaluation and demonstrations, Vault operates using local filesystem storage paths (`storage/node-XX`).
 *   **Durability in Container/Cloud Deployments**: If deployed to serverless or ephemeral container runtimes (e.g. AWS Lambda, basic Vercel serverless), the local filesystem is ephemeral. For long-term hosted durability, persistent volume mounts (e.g., Docker volumes, EBS, PersistentVolumeClaims) should back the storage directory.
+*   **GitHub Pages Dashboard Deployment**: The client-side dashboard is automatically built and deployed to GitHub Pages via a GitHub Actions workflow (`.github/workflows/deploy-pages.yml`). In production builds, the client connects to the backend API via a dynamic base URL (`/api`).
